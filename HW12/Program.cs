@@ -24,7 +24,9 @@ do
     catch (FormatException)
     {
         Console.Clear();
+        Console.ForegroundColor = ConsoleColor.Red;
         Console.WriteLine("Invalid format entered.Try again.");
+        Console.ForegroundColor = ConsoleColor.Gray;
         Console.WriteLine("Press any key...");
         Console.ReadKey();
     }
@@ -166,7 +168,9 @@ void menu(User user)
                     }
                     catch (ArgumentNullException)
                     {
+                        Console.ForegroundColor= ConsoleColor.Red;
                         Console.WriteLine("Null Can not be entered on any feilds, try again.");
+                        Console.ForegroundColor = ConsoleColor.Gray;
                         IsNOTDone = true;
                     }
                     break;
@@ -177,7 +181,9 @@ void menu(User user)
                     var foundduty = dutyService.SearchUserDuty(DutyTitle,user);
                     if (foundduty == null)
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("There is no such duty, please enter the title carefuly.");
+                        Console.ForegroundColor = ConsoleColor.Gray;
                         IsNOTDone = true;
                     }
                     Console.WriteLine(foundduty.ToString());
@@ -188,13 +194,18 @@ void menu(User user)
                     Console.Write("Enter duty id in order to change state: ");
                     if (!int.TryParse(Console.ReadLine(), out int id1))
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("Invalid format entered, please try again.");
+                        Console.ForegroundColor = ConsoleColor.Gray;
                         IsNOTDone = true;
                         break;
                     }
+                    Console.WriteLine("===============================");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine($"States: 1.{StateEnum.Done.ToString()}   " +
                     $"2.{StateEnum.Cancelled.ToString()}  " +
                     $"3.{StateEnum.Pending.ToString()}");
+                    Console.ForegroundColor = ConsoleColor.Gray;
                     Console.Write("Enter the new state number: ");
                     var statnumber = int.Parse(Console.ReadLine());
                     var result2 = GetEnum(statnumber, out StateEnum state);
