@@ -27,7 +27,7 @@ namespace HW12.Entities
         }
         public override string ToString()
         {
-            return $"{Title} --- {DueDate} --- {State} --- Order: {order}";
+            return $"{Title} --- {DueDate.ToString("yyyy/MM/dd")} --- {State} --- Order: {order}";
         }
     }
 }

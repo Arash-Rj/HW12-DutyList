@@ -128,3 +128,4 @@ C:\Users\Mr. X\source\repos\HW12\HW12\obj\Debug\net8.0\refint\HW12.dll
 C:\Users\Mr. X\source\repos\HW12\HW12\obj\Debug\net8.0\HW12.pdb
 C:\Users\Mr. X\source\repos\HW12\HW12\obj\Debug\net8.0\HW12.genruntimeconfig.cache
 C:\Users\Mr. X\source\repos\HW12\HW12\obj\Debug\net8.0\ref\HW12.dll
+C:\Users\Mr. X\source\repos\HW12\HW12\obj\Debug\net8.0\HW12.sourcelink.json
